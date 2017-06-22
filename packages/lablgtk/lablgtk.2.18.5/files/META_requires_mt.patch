@@ -1,0 +1,17 @@
+commit 918bcbfa7c33571f39645bc12c4dd202fe180ad3
+Author: François Bobot <francois.bobot@cea.fr>
+Date:   Thu Jun 22 22:07:04 2017 +0200
+
+    Add a dependency to threads when mt selected
+
+diff --git a/META b/META
+index aafc895..4cc2df9 100644
+--- a/META
++++ b/META
+@@ -1,5 +1,6 @@
+ description = "Bindings for gtk2"
+ requires = ""
++requires(mt) = "threads"
+ version = "2.18.4"
+ 
+ archive(byte) = "lablgtk.cma"
