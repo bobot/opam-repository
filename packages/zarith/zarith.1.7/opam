@@ -25,3 +25,8 @@ depends: [
   "conf-gmp"
   "conf-perl" {build}
 ]
+depexts: [
+  [["ubuntu"] ["gcc"]]
+  [["debian"] ["gcc"]]
+  [["nixpkgs"] ["gcc"]]
+]
