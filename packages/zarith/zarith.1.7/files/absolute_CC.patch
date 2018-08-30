@@ -1,0 +1,10 @@
+--- configure	2018-08-30 16:55:02.195603663 +0200
++++ configure	2018-08-30 16:54:05.490855869 +0200
+@@ -119,6 +119,7 @@
+ {
+     if test "x$1" = "x"; then return 0; fi
+     echo_n "binary $1: "
++    if ((echo "$1" | grep -q "/") && test -x "$1"); then echo "found"; return 1; fi
+     IFS=':'
+     for i in $PATH
+     do

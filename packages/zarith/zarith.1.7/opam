@@ -30,3 +30,4 @@ depexts: [
   [["debian"] ["gcc"]]
   [["nixpkgs"] ["gcc"]]
 ]
+patches: [ "absolute_CC.patch" ]
