@@ -30,4 +30,5 @@ depexts: [
   [["openbsd"] ["devel/pkgconf"]]
   [["osx" "homebrew"] ["pkg-config"]]
   [["freebsd"] ["pkgconf"]]
+  [["nixpkgs"] ["pkgconfig"]]
 ]
