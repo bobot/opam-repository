@@ -1,13 +1,13 @@
-opam-version: "1"
+opam-version: "1.2"
 maintainer: "blue-prawn"
 authors: ["Daniel Stenberg"]
 homepage: "http://curl.haxx.se/"
 license: "BSD-like"
 build: [
-  ["pkg-config" "libcurl"] { os != "darwin" }
+  ["pkg-config" "libcurl"] { os != "macos" }
 ]
 depends: [
-  "conf-pkg-config" { os != "darwin" }
+  "conf-pkg-config"
 ]
 depexts: [
   [["debian"] ["libcurl4-gnutls-dev"]]
