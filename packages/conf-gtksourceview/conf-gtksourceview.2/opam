@@ -19,4 +19,5 @@ depexts: [
   [["opensuse"] ["gtksourceview2-devel"]]
   [["ubuntu"] ["libgtksourceview2.0-dev"]]
   [["osx" "homebrew"] ["gtksourceview" "libxml2"]]
+  [["nixpkgs"] ["gnome2.gtksourceview"]]
 ]

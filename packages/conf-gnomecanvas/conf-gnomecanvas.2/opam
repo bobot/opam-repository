@@ -10,4 +10,5 @@ depexts: [
   [["osx" "homebrew"] ["libgnomecanvas"]]
   [["archlinux"] ["libgnomecanvas"]]
   [["openbsd"] ["libgnomecanvas"]]
+  [["nixpkgs"] ["gnome2.libgnomecanvas"]]
 ]

@@ -30,6 +30,7 @@ depexts: [
   [["oraclelinux"] ["gtk2-devel"]]
   [["alpine"] ["gtk+2.0-dev"]]
   [["opensuse"] ["gtk2-devel"]]
+  [["nixpkgs"] ["gtk2" "expat"]]
 ]
 patches: ["lablgldir.patch"]
 post-messages: [

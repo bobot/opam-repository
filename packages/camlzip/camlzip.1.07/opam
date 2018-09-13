@@ -20,6 +20,7 @@ depexts: [
   [["rhel"]   ["zlib-devel"]]
   [["fedora"] ["zlib-devel"]]
   [["alpine"] ["zlib-dev"]]
+  [["nixpkgs"] ["zlib"]]
 ]
 install: [make "install-findlib"]
 available: [ ocaml-version >= "4.02.0" ]
