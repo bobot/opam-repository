@@ -13,4 +13,5 @@ depexts: [
   [["mageia"] ["libexpat1-devel"]]
   [["ubuntu"] ["libexpat1-dev"]]
   [["fedora"] ["expat-devel"]]
+  [["nixpkgs"] ["expat"]]
 ]

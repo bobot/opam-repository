@@ -9,4 +9,5 @@ depexts: [
   [["debian"] ["libglade2-dev"]]
   [["ubuntu"] ["libglade2-dev"]]
   [["fedora"] ["libglade2-devel"]]
+  [["nixpkgs"] ["gnome2.libglade"]]
 ]
