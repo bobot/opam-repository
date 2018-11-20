@@ -11,6 +11,7 @@ depexts: [
   ["libgnomecanvas"] {os = "macos" & os-distribution = "homebrew"}
   ["libgnomecanvas"] {os-distribution = "archlinux"}
   ["libgnomecanvas"] {os = "openbsd"}
+  ["gnome2.libgnomecanvas"] {os = "nixos"}
 ]
 synopsis: "Virtual package relying on a Gnomecanvas system installation"
 description: """

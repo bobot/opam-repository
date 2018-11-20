@@ -11,6 +11,7 @@ depexts: [
   ["libexpat1-devel"] {os-distribution = "mageia"}
   ["libexpat1-dev"] {os-distribution = "ubuntu"}
   ["expat-devel"] {os-distribution = "fedora"}
+  ["expat"] {os-distribution = "nixos"}
 ]
 synopsis: "Virtual package relying on an expat system installation"
 description:
