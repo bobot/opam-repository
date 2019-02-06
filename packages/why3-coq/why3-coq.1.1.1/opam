@@ -41,7 +41,7 @@ flags: [ light-uninstall ]
 
 depends: [
   "ocamlfind" {build}
-  "why3" {= "1.0.0"}
+  "why3" {= "1.1.1"}
   "coq" {>= "8.5" & < "8.9~"}
 ]
 
