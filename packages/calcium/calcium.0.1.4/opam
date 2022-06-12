@@ -1,0 +1,44 @@
+opam-version: "2.0"
+synopsis:
+  "Stub of the C library Antic. For exact computation with real and complex numbers, presently in early development"
+maintainer: ["François Bobot"]
+authors: ["François Bobot"]
+license: "LGPL-2.1"
+homepage: "https://github.com/bobot/ocaml-flint"
+bug-reports: "https://github.com/bobot/ocaml-flint/issues"
+depends: [
+  "dune" {>= "3.2"}
+  "zarith" {>= "1.12"}
+  "flint"
+  "arb"
+  "antic"
+  "ctypes" {>= "0.20.1"}
+  "conf-mpfr" {>= "3"}
+  "dune-site" {with-test}
+  "ocaml" {>= "4.10"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/bobot/ocaml-flint.git"
+url {
+  src:
+    "https://github.com/bobot/ocaml-flint/releases/download/0.1.4/flint-0.1.4.tbz"
+  checksum: [
+    "sha256=3d3cffcff7d081ed6b19fdd53fe816bdf0fe2b3bf093dbf2e2de99c97bd27054"
+    "sha512=21e250d679d18e5f599105386db3fa105c2d909150970610e5bb1d06f0034362199df5d36ed2061adbd42323f4ff4f28d322391c0f0692417988d3076785b12c"
+  ]
+}
+x-commit-hash: "e0424278d9b548532eea017e0d99d679bec6a75d"
