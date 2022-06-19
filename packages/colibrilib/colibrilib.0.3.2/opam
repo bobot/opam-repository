@@ -1,0 +1,36 @@
+opam-version: "2.0"
+synopsis: "A library of domains and propagators proved in Why3"
+description: "Interval, and union of interval domains defined formally"
+maintainer: ["François Bobot"]
+authors: ["François Bobot"]
+homepage: "https://colibri.frama-c.com"
+bug-reports: "https://git.frama-c.com/pub/colibrics/issues"
+depends: [
+  "dune" {>= "3.0"}
+  "zarith" {>= "1.12"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://git.frama-c.com/pub/colibrics.git"
+url {
+  src:
+    "https://git.frama-c.com/api/v4/projects/879/packages/generic/colibri2/0.3.2/colibri2-0.3.2.tbz"
+  checksum: [
+    "sha256=405ef14423e41c16928b4d0513723ec394349c8b336c2ab9aa2b134931ee76dc"
+    "sha512=cc9fa4fde634420c4286bc34159b748f017cbb1c367d1157a504579ea0b5cf26f5874c47d93d687c049d1708b3155a6a13d80af680b5e6702768752fb370b25d"
+  ]
+}
+x-commit-hash: "c7a21cc9c747c36bcec49221718f1da2b847eb51"
