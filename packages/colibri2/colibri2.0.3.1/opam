@@ -1,0 +1,61 @@
+opam-version: "2.0"
+synopsis: "A CP solver for smtlib"
+description: "A reimplementation of COLIBRI in OCaml"
+maintainer: ["François Bobot"]
+authors: [
+  "François Bobot"
+  "Bruno Marre"
+  "Guillaume Bury"
+  "Stéphane Graham-Lengrand"
+]
+license: "LGPL-3.0-only"
+homepage: "https://colibri.frama-c.com"
+bug-reports: "https://git.frama-c.com/pub/colibrics/issues"
+depends: [
+  "colibrilib" {= version}
+  "containers" {>= "2.1"}
+  "dolmen" {>= "0.7"}
+  "dolmen_type" {>= "0.7"}
+  "dolmen_loop" {>= "0.7"}
+  "cmdliner" {= "1.0.4"}
+  "base" {>= "v0.14.2"}
+  "gen" {>= "0.5.3"}
+  "dune" {>= "3.0"}
+  "dune-build-info"
+  "zarith" {>= "1.12"}
+  "ppx_deriving" {>= "5.2.1"}
+  "ppx_optcomp" {>= "v0.14.3"}
+  "ppx_hash" {>= "v0.14.0"}
+  "ocamlgraph" {>= "2.0.0"}
+  "qcheck-core" {>= "0.18.1"}
+  "calcium"
+  "farith"
+  "ounit2" {"2.2.4" >= with-test}
+  "ocaml" {>= "4.08"}
+  "ocplib-simplex" {>= "0.4"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://git.frama-c.com/pub/colibrics.git"
+url {
+  src:
+    "https://git.frama-c.com/api/v4/projects/879/packages/generic/colibri2/0.3.1/colibri2-0.3.1.tbz"
+  checksum: [
+    "sha256=4431047cafc81627cab7ceb3f7a4e5a18fc968fbd45f781c8813c4d88ca15d3f"
+    "sha512=dfc90e022513b47f963837162c2de933698d1643e69e2e2d7281c08a1e6043451b413823559a77c4264d69f0e9eef281ad7b35769ed47a55a8a59524eaa1a21a"
+  ]
+}
+x-commit-hash: "7aeceb70a2b6e24fe498f23cc222bc04f381d502"
