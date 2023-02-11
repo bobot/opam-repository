@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "Stub of the C library Flint2"
+maintainer: ["François Bobot"]
+authors: ["François Bobot"]
+license: "LGPL-2.1"
+homepage: "https://github.com/bobot/ocaml-flint"
+bug-reports: "https://github.com/bobot/ocaml-flint/issues"
+depends: [
+  "dune" {>= "3.2"}
+  "zarith" {>= "1.12"}
+  "ctypes" {>= "0.20.1"}
+  "conf-mpfr" {>= "3"}
+  "dune-site" {with-test}
+  "ocaml" {>= "4.10"}
+  "conf-pkg-config" {>= "2"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/bobot/ocaml-flint.git"
+url {
+  src:
+    "https://github.com/bobot/ocaml-flint/releases/download/0.1.6/flint-0.1.6.tbz"
+  checksum: [
+    "sha256=e2379aa79b13302d651dc5499fe77e2f0e2f880467c3b20d6740a6f3c3905a89"
+    "sha512=bbf036d2a823d9b324af77c621f0583eebf73880af9d739dac57ed9b46efd09106574ee545888e2a916d0e1965f3313725fe2d46d80ade1c3e65e166ffff02b4"
+  ]
+}
+x-commit-hash: "0800b4d5e69e9c78902af6c9a5007ca5e1d275ca"
