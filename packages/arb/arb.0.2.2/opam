@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "Stub of the C library Arb. Ball approximation"
+maintainer: ["François Bobot"]
+authors: ["François Bobot"]
+license: "LGPL-2.1-only"
+homepage: "https://github.com/bobot/ocaml-flint"
+bug-reports: "https://github.com/bobot/ocaml-flint/issues"
+depends: [
+  "dune" {>= "3.2"}
+  "flint" {= version}
+  "ctypes" {>= "0.20.1"}
+  "conf-mpfr" {>= "3"}
+  "ocaml" {>= "4.10"}
+  "conf-pkg-config" {>= "2"}
+  "dune-configurator"
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/bobot/ocaml-flint.git"
+url {
+  src:
+    "https://github.com/bobot/ocaml-flint/releases/download/0.2.2/flint-0.2.2.tbz"
+  checksum: [
+    "sha256=3ee9ef8bbe8396a9741380716095af507ee6f7dbea3dddc7c44f0b21c5ceafed"
+    "sha512=1920a375c9665193c4dfcf4cfa167f7d39cd239ccae03bd8a8c8c502ad45a5692bda31372831bb00ccd40acd57f84611f94418e06101ad30ba5b4fc5fa7e65bc"
+  ]
+}
+x-commit-hash: "8ecdd1e562a5e920f204ae3578ff5f6f448e42dd"
